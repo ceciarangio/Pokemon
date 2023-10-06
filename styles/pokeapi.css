@@ -1,0 +1,114 @@
+body {
+    background-color: orangered;
+    margin: 0;
+    font-family: rubik;
+    color: white;
+  }
+  .container {
+    padding: 40px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+  }
+  
+ /* .card {
+    list-style: none;
+    padding: 40px;
+    background-color: red;
+    color: #222;
+    text-align: center;
+    perspective: 1000px; 
+    transform-style: preserve-3d; 
+    transition: transform 2s;  
+ 
+  }*/
+  .card-title {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .card-subtitle {
+    font-weight: lighter;
+    color: #666;
+    margin-top: 5px;
+  }
+  .card-image {
+    height: 180px;
+  }
+  #pokedex {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+  }
+  /*.card:hover {
+    animation: bounce 3s linear;
+    transform: rotateY(180deg);
+  }*/
+
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgb(243, 154, 82);
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(243, 154, 82);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+
+  @keyframes bounce {
+    20% {
+      transform: translateY(-6px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    60% {
+      transform: translateY(-2px);
+    }
+    80% {
+      transform: translateY(-0px);
+    }
+  }
