@@ -1,8 +1,8 @@
 body {
-    background-color: orangered;
+    background-image: url(./fondo\ gral.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
-    font-family: rubik;
-    color: white;
   }
   .container {
     padding: 40px;
@@ -11,9 +11,27 @@ body {
   h1 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 54px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; 
   }
   
+  .img{
+    width: 550px;
+    margin-right: 110px;
+  }
+
+
+  .button{
+    background-image: url(./fondo\ gral.png);
+    color: black;
+    width: 240px;
+    height: 50px;
+    font-family: 'Pokemon Solid', sans-serif;
+   
+    font-size: 18px;
+    text-align: center;
+  }
  /* .card {
     list-style: none;
     padding: 40px;
@@ -25,25 +43,48 @@ body {
     transition: transform 2s;  
  
   }*/
+
+ 
   .card-title {
     text-transform: uppercase;
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 0;
+    font-size: 25px;
+    font-weight:normal;
+    /* margin-top: 50px; */
+    font-family: 'Pixelify Sans', cursive;
+    color:rgb(255, 255, 255);
   }
   .card-subtitle {
     font-weight: lighter;
-    color: #666;
+    color: rgb(255, 255, 255);
     margin-top: 5px;
+    font-family: 'Pokemon Solid', sans-serif;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+  }
+
+  .card-subtitle2{
+    font-weight: lighter;
+    color: whie;
+    margin-top: 5px;
+    font-family: 'Pixelify Sans', cursive;
+    margin-bottom: 0px;
+  }
+  .card-back{
+    margin-bottom: 50px
+
   }
   .card-image {
-    height: 180px;
+    height: 130px;
+    margin-top: 20px;
   }
+
+
   #pokedex {
     padding-inline-start: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
     grid-gap: 20px;
+    justify-items: center;
   }
   /*.card:hover {
     animation: bounce 3s linear;
@@ -52,10 +93,12 @@ body {
 
   .flip-card {
     background-color: transparent;
-    width: 200px;
-    height: 300px;
+    width: 220px;
+    height: 320px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-image: url(./fondo\ gral.png);
+    border-radius: 10px;
   }
   
   /* This container is needed to position the front and back side */
@@ -71,6 +114,7 @@ body {
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    
   }
   
   /* Position the front and back side */
@@ -84,18 +128,126 @@ body {
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
-    background-color: rgb(243, 154, 82);
-    color: black;
+    /* background-color: rgb(243, 154, 82);
+    color: black; */
+    background-image: url();
+    background-size: cover ; 
+    z-index: 1;
+    border-radius: 13px;
   }
   
   /* Style the back side */
   .flip-card-back {
-    background-color: rgb(243, 154, 82);
+    border-image: url(./fondo\ gral.png);
     color: white;
     transform: rotateY(180deg);
   }
 
+  .water{
+    background-image: url(./recuadro\ ic.png);
+    z-index: 2;
+    width: 100%;
+    background-size: cover;
+  }
 
+  .fire{
+    background-image: url(./recuadro\ fuego.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .grass{
+    background-image: url(./recuadro\ hoja.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+   
+  }
+
+  .bug{
+    background-image: url(./recuadro\ bixho.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .normal{
+    background-image: url(./recuadro\ normal.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .poison{
+    background-image: url(./recuadro\ poison.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .electric{
+    background-image: url(./recuadro\ electric.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .ground{
+    background-image: url(./recuadro\ tierra.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .fairy{
+    background-image: url(./recuadro\ hada.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .fighting{
+    background-image: url(./recuadro\ pelea.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .psychic{
+    background-image: url(./recuadro\ pisiq.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .rock{
+    background-image: url(./recuadro\ rock.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .ghost{
+    background-image: url(./recuadro\ ghost.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .ice{
+    background-image: url(./recuadro\ agua.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .dragon{
+    background-image: url(./recuadro\ dragon.png);
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+  }
 
 
   @keyframes bounce {

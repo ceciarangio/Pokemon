@@ -1,37 +1,4 @@
 
-
-// fetch('https://pokeapi.co/api/v2/pokemon/')
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((myJson) => {
-//         console.log(myJson);
-
-//     //     for(let index = 0; index < myJson.results.length; index++) {
-//     // const pokemons = myJson.results[index];
-
-//     // let div$$ = document.createElement('div')
-//     // let h2$$ = document.createElement('h2')
-//     // h2$$.textContent = pokemons.name
-//     // div$$.appendChild(h2$$)
-    
-
-//     // fetch(pokemons.url)
-//     //     .then((response) => {
-//     //         return response.json();
-//     //     })
-//     //     .then((fotos) => {
-//     //         console.log(fotos);
-//     //         let img$$ = document.createElement('img')
-//     //         img$$.src = fotos.sprites.front_default;
-//     //         div$$.appendChild(img$$)
-//     //         document.body.appendChild(div$$)
-//     //     });
-//     }
-// )
-
-
-
 const pokedex = document.getElementById("pokedex");
 
 const getPokemonById = (id) => {
@@ -39,23 +6,38 @@ const getPokemonById = (id) => {
   return fetch(url).then((res) => res.json());
 };
 
+let h1$$ = document.querySelector('h1')
+let divContainer$$ = document.querySelector("div")
+let button$$ = document.createElement('button')
+button$$.classList = 'button'
+button$$.textContent = 'Press to Play!'
+
+button$$.addEventListener('click', function() {
+  window.location.href = 'https://pokemon-game.tecnops.es/?_gl=1*12cvo6r*_ga*ODQ5NTk0MDkyLjE2OTY2NjUxNzc.*_ga_Q84VJ2W6Q0*MTY5NjY2NTE3Ni4xLjAuMTY5NjY2NTE3Ni42MC4wLjA.&_ga=2.247900359.1702337096.1696665177-849594092.1696665177'})
+h1$$.appendChild(button$$)
+
 const pokemonComponent = ({ name, image, type, id, image2, habilidad, image3 }) => {
   return  `<div class="flip-card">
   <div class="flip-card-inner">
-    <div class="flip-card-front">
-    <h2 class="card-title">#${id} ${name}</h2>
-    <h3 class="card-subtitle">${type}</h3>
+    <div class="flip-card-front ${type}">
     <img class="card-image" src="${image}"/>
+    <h2 class="card-title">${name}</h2>
+    <h3 class="card-subtitle">${type}</h3>
     </div>
     <div class="flip-card-back">
-    <img class="card-image" src="${image2}"/>
-    <h2 class="card-subtitle">"${image3}"</h2>>
-    <h2 class="card-subtitle">"${habilidad}"</h2>
+    <img class="card-image imagen:hover" src="${image2}"/>
+    <h2 class="card-subtitle2">"His movement is ${image3}"</h2>>
+    <h2 class="card-subtitle2">"His ability is ${habilidad}"</h2>
     </div>
   </div>
 </div>`
 };
 
+// let h1$$ = document.querySelector('h1')
+// let img$$ = document.createElement('img')
+// h1$$.appendChild(img$$)
+// img$$.setAttribute("style", "width:550px, margin-left:180px");
+// img$$.src = 'https://static.vecteezy.com/system/resources/thumbnails/027/127/591/small_2x/pokemon-logo-pokemon-icon-transparent-free-png.png'
 
 const getAllPokemon = async (limite) => {
   for (let i = 1; i <= limite; i++) {
@@ -64,34 +46,31 @@ const getAllPokemon = async (limite) => {
       id: i,
       name: res.name,
       image: res.sprites["front_default"],
-      image2: res.sprites["back_default"],
+      image2: res.sprites.versions["generation-v"]["black-white"].animated.back_default,
       image3: res.moves[0].move.name,
       habilidad: res.abilities[0].ability.name,
-      type: res.types.map((type) => type.type.name).join(", ")
+      type: res.types[0].type.name,
+      // .map((type) => type.type.name)
     });
   }
 };
 
 getAllPokemon(150);
 
-// const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-//     target: '#navbar-example'
-//   })
 
 
-// function addListeners() {
-//   // TODO
-//   console.log('addListeners');
-// }
+// Selecciona el botón de inicio
+const botonInicio = document.getElementById('botonInicio');
 
-// window.onload = function () {
-//   addListeners();
-// };
+// Selecciona la pantalla principal
+const pantallaPrincipal = document.getElementById('pantallaPrincipal');
 
-// document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
-//   el.addEventListener('shown.bs.tab', () => {
-//     const target = el.getAttribute('data-bs-target')
-//     const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
-//     bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
-//   })
-// })
+// Agrega un evento click al botón de inicio
+botonInicio.addEventListener('click', function() {
+    // Oculta la pantalla de presentación
+    document.querySelector('.presentacion').style.display = 'none';
+    
+
+    // Muestra la pantalla principal
+    pantallaPrincipal.style.display = 'block';
+});

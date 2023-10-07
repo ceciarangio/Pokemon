@@ -7,13 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="js/pokedex.js" defer></script>
     <title>Pokedex</title>
+    <script src="js/views/list.js" defer></script>
     <link rel="stylesheet" href="styles/pokeapi.css" />
+    <link rel="stylesheet" href="styles/presentacion.css" />
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Pokedex</h1>
+    <div class="presentacion">
+        <h2>Bienvenido a mi sitio web</h2>
+        <button id="botonInicio" class="boton-inicio">Comenzar</button>
+    </div>
+    <div class="container" id="pantallaPrincipal" style="display: none;">
+        <h1><img class="img" src="https://static.vecteezy.com/system/resources/thumbnails/027/127/591/small_2x/pokemon-logo-pokemon-icon-transparent-free-png.png"/></h1>
+
+        <input type="text" id="searchInput" placeholder="Search Pokemon">
+        <button id="searchButton">Search</button>
+        
         <div id="pokedex"></div>
     </div>
     
