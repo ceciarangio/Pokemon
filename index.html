@@ -2,35 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="js/pokedex.js" defer></script>
-    <title>Pokedex</title>
-    <script src="js/views/list.js" defer></script>
-    <link rel="stylesheet" href="styles/pokeapi.css" />
-    <link rel="stylesheet" href="styles/presentacion.css" />
-    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="js/pokedex.js" defer></script>
+  <title>Pokedex</title>
+  <script src="js/views/list.js" defer></script>
+  <link rel="stylesheet" href="styles/presentacion.css" />
+  <link rel="stylesheet" href="styles/pokeapi.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 </head>
 
 <body>
-    <div class="presentacion">
-        <h2>Bienvenido a mi sitio web</h2>
-        <button id="botonInicio" class="boton-inicio">Comenzar</button>
-    </div>
-    <div class="container" id="pantallaPrincipal" style="display: none;">
-        <h1><img class="img" src="https://static.vecteezy.com/system/resources/thumbnails/027/127/591/small_2x/pokemon-logo-pokemon-icon-transparent-free-png.png"/></h1>
-
-        <input type="text" id="searchInput" placeholder="Search Pokemon">
-        <button id="searchButton">Search</button>
-        
-        <div id="pokedex"></div>
-    </div>
+  <div class="presentacion">
+   
+    <img class="imgA" src="./assets/ash.gif" alt="">
+    <h2 class="imgA h2">Welcome to my Pokeapi !!</h2>
+    <button id="botonInicio" class="boton-inicio">Click here! </button>
+  </div>
+  <div class="container" id="pantallaPrincipal" style="display: none;">
+    <h1>
+      <input type="text" id="searchInput" placeholder="Search Pokemon" class="search">
+      <button id="searchButton" class="searchButton">Search</button>
     
+      <img class="img"
+        src="https://static.vecteezy.com/system/resources/thumbnails/027/127/591/small_2x/pokemon-logo-pokemon-icon-transparent-free-png.png" />
+        
+      <a class="button"
+        href="https://pokemon-game.tecnops.es/?_gl=1*12cvo6r*_ga*ODQ5NTk0MDkyLjE2OTY2NjUxNzc.*_ga_Q84VJ2W6Q0*MTY5NjY2NTE3Ni4xLjAuMTY5NjY2NTE3Ni42MC4wLjA.&_ga=2.247900359.1702337096.1696665177-849594092.1696665177">
+        'Press to Play!'
+      </a>
+    </h1>
+
+    <div id="typeFilter"> </div> 
+
+    <div id="pokedex"></div>
+  </div>
 </body>
 
 </html>

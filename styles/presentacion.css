@@ -4,15 +4,43 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-image: url(./fondo\ gral.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Estilos para el botón de inicio */
 .boton-inicio {
     padding: 10px 20px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: #fff;
+    font-size: 40px;
+    background-image: url(../assets/200w.webp);
+    color: rgb(228, 18, 53);
     border: none;
     cursor: pointer;
+    margin-top: 30px;
+    width: 240px;
+  height: 100px;
+  border-radius: 20px;
+  font-family: 'Pixelify Sans', cursive;
+  text-align: center;
+  background-size: cover;
 }
+
+.imgA{
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+   
+}
+
+.h2{
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 28px;
+}
+
+.boton-inicio:hover{
+    background-color: black;
+}
+
+
